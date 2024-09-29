@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Order Sederhana</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Pesan Produk Kami</h1>
+    </header>
+    
+    <main>
+        <form id="order-form" action="https://formspree.io/f/{YOUR_FORM_ID}" method="POST">
+            <div class="form-group">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="_replyto" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="product">Produk:</label>
+                <select id="product" name="product" required>
+                    <option value="">--Pilih Produk--</option>
+                    <option value="produk1">Produk 1</option>
+                    <option value="produk2">Produk 2</option>
+                    <option value="produk3">Produk 3</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="quantity">Jumlah:</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit">Pesan Sekarang</button>
+            </div>
+        </form>
+        
+        <div id="form-message"></div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
